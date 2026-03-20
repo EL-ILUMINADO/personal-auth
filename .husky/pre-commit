@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🕵️‍♂️ Running TypeScript compiler checks..."
+pnpm tsc --noEmit
+
+echo "💅 Formatting and Linting staged files..."
+pnpm exec lint-staged
